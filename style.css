@@ -1,0 +1,1238 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+}
+
+body{
+    background-color: gray;
+}
+
+
+.store{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;  
+    height: 96%; 
+    width: 71%;
+    left: 15%;
+    top: 2%; 
+}
+
+
+
+
+
+.Shelf1{
+    cursor: pointer;
+    width: 9.5%;
+    height: 16.5%;
+    position: fixed;
+    left: 46%;
+    top: 37.4%;
+    z-index: 2;
+    
+
+}
+
+.Shelf2{
+    cursor: pointer;
+    width: 9.5%;
+    position: fixed;
+    height: 16.5%;
+    left: 46%;
+    top: 53%;
+    z-index: 2;
+}
+
+.Shelf3{
+    cursor: pointer;
+    width: 9.5%;
+    position: fixed;
+    height: 16.5%;
+    left: 46%;
+    top: 68.7%;
+    z-index: 2;
+    
+}
+
+.Shelf4{
+    cursor: pointer;
+    width: 9.5%;
+    position: fixed;
+    height: 16.5%;
+    left: 25%;
+    top: 37.4%;
+    z-index: 2;
+    
+}
+
+.Shelf5{
+    cursor: pointer;
+    width: 9.5%;
+    position: fixed;
+    height: 16.5%;
+    left: 25%;
+    top: 53%;
+    z-index: 2;
+}
+
+.Shelf6{
+    cursor: pointer;
+    width: 9.5%;
+    position: fixed;
+    height: 16.5%;
+    left: 25%;
+    top: 68.7%;
+    z-index: 2;
+    
+}
+.bigFridge1{
+    margin: 0;
+    padding: 0;
+    height: 22.5%;
+    width: 7%;
+    cursor: pointer;
+    position: fixed;
+    top: 7.5%;
+    left: 44.5%;
+    z-index: 2;
+    
+}
+
+.bigFridge2{
+    cursor: pointer;
+    width: 7%;
+    position: fixed;
+    height: 22.5%;
+    top: 7.5%;
+    left: 52%;
+    z-index: 2;
+    
+
+}
+
+.bigFridge3{
+    cursor: pointer;
+    width: 7%;
+    position: fixed;
+    height: 22.5%;
+    top: 7.5%;
+    left: 59.6%;
+    z-index: 2;
+    
+
+}
+
+.smallFridge1{
+    cursor: pointer;
+    width: 7.5%;
+    position: fixed;
+    height: 24%;
+    top: 15.1% ;
+    left: 72.4%;
+    
+}
+
+.smallFridge2{
+    cursor: pointer;
+    width: 7.5%;
+    position: fixed;
+    height: 24%;
+    top: 33% ;
+    left: 72.4%;
+    
+
+}
+
+.cashier{
+    cursor: pointer;
+    width: 10%;
+    height: 18.4%;
+    position: fixed;
+    top: 56%;
+    left: 68.5%;
+    z-index: 2;
+}
+
+.cashier:hover{
+    transform: translate(0, -5px);
+
+}
+
+.security1{
+    width: 3.7%;
+    position: fixed;
+    height: 14%;
+    top: 59.5%;
+    left: 80.3%;
+    z-index: 2;
+}
+
+.security2{
+    width: 3.7%;
+    position: fixed;
+    height: 14%;
+    top: 80.5%;
+    left: 80.5%;
+    z-index: 2;
+}
+
+/* BUTTONS */
+
+.reloadSmallFridge{
+    position: fixed;
+    height: 5%;
+    top: 36.75%;
+    left: 47.1%;
+    background-color: rgb(0, 204, 255); /* Green */
+    border: none;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+        
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 90%;
+   
+    cursor: pointer;
+    border-radius: 15%;
+    font-family: cursive;
+    z-index: 6;
+}
+
+
+
+/* object move */
+
+.bigFridge1:hover{
+    transform: translate(0, -5px);
+}
+.bigFridge2:hover{
+    transform: translate(0, -5px);
+}
+.bigFridge3:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf1:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf2:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf3:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf4:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf5:hover{
+    transform: translate(0, -5px);
+}
+
+.Shelf6:hover{
+    transform: translate(0, -5px);
+}
+
+.smallFridge1:hover{
+    transform: translate(0, -5px);
+}
+
+.smallFridge2:hover{
+    transform: translate(0, -5px);
+}
+
+/* object move */
+
+.BigFridge1Description{
+    position: fixed;
+    font-size: 70%;
+    width: 10%;
+    height: 3%;
+    top: 3%;
+    left: 42.65%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+.BigFridge1Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.bigFridge1:hover + .BigFridge1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+#ReloadedBigFridge1:hover + .BigFridge1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+
+.BigFridge2Description{
+    position: fixed;
+    font-size: 70%;
+    width: 10%;
+    height: 3%;
+    top: 3%;
+    left: 50.1%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+.BigFridge2Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.bigFridge2:hover + .BigFridge2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedBigFridge2:hover + .BigFridge2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+.BigFridge3Description{
+    position: fixed;
+    font-size: 70%;
+    width: 10%;
+    height: 3%;
+    top: 3%;
+    left: 57.75%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+.BigFridge3Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.bigFridge3:hover + .BigFridge3Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedBigFridge3:hover + .BigFridge3Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+.smallFridge1Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 69.7%;
+    top: 17%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+.smallFridge1Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.smallFridge1:hover + .smallFridge1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedSmallFridge1:hover + .smallFridge1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+
+
+.smallFridge2Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 69.7%;
+    top: 34.8%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.smallFridge2Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.smallFridge2:hover + .smallFridge2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedSmallFridge1:hover + .smallFridge2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+.Shelf1Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 44.5%;
+    top: 30.5%;    
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf1Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf1:hover + .Shelf1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+    z-index: 1000;
+}
+
+#ReloadedShelf1:hover + .Shelf1Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+    z-index: 1000;
+}
+
+.Shelf2Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 44.5%;
+    top: 46%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf2Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf2:hover + .Shelf2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedShelf2:hover + .Shelf2Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+.Shelf3Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 44.5%;
+    top: 61.7%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf3Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf3:hover + .Shelf3Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedShelf3:hover + .Shelf3Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+.Shelf4Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 23.5%;
+    top: 30.5%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf4Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf4:hover + .Shelf4Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedShelf4:hover + .Shelf4Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+
+
+
+
+
+.Shelf5Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 23.5%;
+    top: 46%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf5Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf5:hover + .Shelf5Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedShelf5:hover + .Shelf5Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+
+.Shelf6Description{
+    position: fixed;
+    font-size: 70%;
+    width: 12%;
+    height: 3%;
+    left: 23.5%;
+    top: 61.7%;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.Shelf6Description::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.Shelf6:hover + .Shelf6Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+#ReloadedShelf6:hover + .Shelf6Description{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0,-10px);
+}
+
+
+.login{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    color: black;
+    background-color: rgb(77, 75, 75);
+    text-align: center;
+    width: 35%;
+    height: 35%;
+    left: 34%;
+    top: 33%;
+    border-radius: 3%;
+    border-style: solid;
+}
+
+.addnetwork{
+    margin-top: 4%;
+}
+
+.addnetwork{
+    width: 50%;
+    height: 15%;
+}
+
+.Guide{
+    width: 50%;
+    height: 15%;
+}
+
+.supermarket{
+    font-size: 500%;
+    text-align: center;
+}
+
+
+
+
+.Connect{
+width: 50%;
+height: 15%;
+}
+
+
+.Buy{
+    margin-top: 10%;
+    width: 50%;
+    height: 15%;
+}
+
+
+.balancepage{
+    position: fixed;
+    color: white;
+    
+}
+
+#balance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tokenimage{
+    position: fixed;
+    top: 5.6%;
+    left: 73.6%;
+    width: 3.5%;
+    height: 7%;
+    z-index: 12;
+}
+
+.cashierpage{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    color: black;
+    background-color: rgb(77, 75, 75);
+    text-align: center;
+    width: 35%;
+    height: 35%;
+    left: 34%;
+    top: 33%;
+    border-radius: 1%;
+    border-style: solid;
+    z-index: 5;
+  
+}
+
+.balancebox{
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 8%;
+    height: 5%;
+    left: 88%;
+    top: 7%;
+    border-radius: 1%;
+    border-style: solid;
+    border-width: 4px;
+    z-index: 5;
+}
+ 
+
+
+
+
+
+#cashierpage{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    color: black;
+    background-color: rgb(77, 75, 75);
+    text-align: center;
+    width: 35%;
+    height: 40%;
+    left: 34%;
+    top: 32.9%;
+    border-radius: 3% 0% 3% 3%;
+    border-style: solid;
+    z-index: 100;   
+}
+
+#closecashierpage:hover{background-color: #999;}
+
+
+#Menu{
+    position: fixed;
+    color: black;
+    width: 10%;
+    height: 5.5%;
+    top: 32%;
+    left: 47.5%;
+    border-radius: 6%;
+    z-index: 101;
+}
+
+#description{
+    position: fixed;
+    color: black;
+    width: 35%;
+    height: 5.5%;
+    top: 41%;
+    left: 35%;
+    font-size: 16px;
+    border-radius: 6%;
+    z-index: 101;
+}
+
+#upgrade{
+    position: fixed;
+    width: 10%;
+    height: 5.5%;
+    top: 56%;
+    left: 35.25%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+}
+
+#upgrade:hover{background-color: #999;}
+
+#upgrade:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+#buytoken{
+    position: fixed;
+    width: 10%;
+    height: 5.7%;
+    top: 56%;
+    left: 46.25%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+}
+
+.saverbutton{
+    position: fixed;
+    width: 10%;
+    height: 5.7%;
+    top: 7%;
+    left: 2%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+    z-index: 10;
+}
+
+.saverbutton:hover{background-color: #999;}
+
+.saverbutton:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+#buytoken:hover{background-color: #999;}
+
+#buytoken:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+#selltoken{
+    position: fixed;
+    width: 11%;
+    height: 5.5%;
+    top: 56%;
+    left: 57.25%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+}
+
+
+#selltoken:hover{background-color: #999;}
+
+#selltoken:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+#buyEquipment{
+    position: fixed;
+    width: 11%;
+    height: 6%;
+    top: 64.5%;
+    left: 45.7%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+}
+
+#buyEquipment:hover{background-color: #999;}
+
+#buyEquipment:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+#closecashierpage{
+    position: fixed;
+    width: 4%;
+    height: 5.5%;
+    top: 33.2%;
+    left: 65.43%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    border-style: 5px solid;
+}
+
+#upgradedescription{
+    position: fixed;
+    color: rgba(255, 255, 0, 0.884);
+    width: 50%;
+    height: 5.5%;
+    top: 48%;
+    left: 27%;
+    font-size: 10px;
+    z-index: 101;
+}
+
+#upgradecost{
+    position: fixed;
+    color: rgba(255, 255, 0, 0.884);
+    width: 50%;
+    height: 5.5%;
+    top: 52%;
+    left: 27%;
+    font-size: 10px;
+    z-index: 101;
+}
+
+#afterupgrade{
+    position: fixed;
+    color: rgba(255, 255, 0, 0.884);
+    width: 45%;
+    height: 5.5%;
+    top: 66%;
+    left: 29%;
+    font-size: 10px;
+    z-index: 101;
+}
+
+#buynote{
+    position: fixed;
+    color: red;
+    width: 45%;
+    height: 5.5%;
+    top: 53%;
+    left: 29%;
+    font-size: 9px;
+    z-index: 101;
+}
+
+#buytokenamount{
+    position: fixed;
+    text-align: center;
+    margin: 0.1%;
+    width: 15%;
+    height: 4.5%;
+    top: 57%;
+    left: 43.5%;
+    border-style: 10px solid;
+    
+    z-index: 101;
+}
+
+
+.lock{
+    cursor: pointer;
+    width: 6.5%;
+    height: 13.5%;
+    position: fixed;
+    top: 12.3%;
+    left: 44.7%;
+    z-index: 10;
+}
+
+
+#shopSmallFridge{
+    position: fixed;
+    width: 6.5%;
+    height: 19%;
+    top: 51%;
+    left: 37%;
+    z-index: 105;
+}
+
+#shopBigFridge{
+    position: fixed;
+    width: 6%;
+    height: 17.5%;
+    top: 52.6%;
+    left: 48%;
+    z-index: 105;
+}
+
+#shopShelf{
+    position: fixed;
+    width: 8.5%;
+    height: 11.5%;
+    top: 55%;
+    left: 58%;
+    z-index: 105;
+}
+
+#buySmallFridge{
+    position: fixed;
+    width: 7%;
+    height: 5.7%;
+    top: 68.4%;
+    left: 36.7%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+    z-index: 106;
+}
+
+#buySmallFridge:hover{background-color: #999;}
+
+#buySmallFridge:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+
+#buyBigFridge{
+    position: fixed;
+    width: 7%;
+    height: 5.7%;
+    top: 68.4%;
+    left: 47.5%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+    z-index: 106;
+}
+
+#buyBigFridge:hover{background-color: #999;}
+
+#buyBigFridge:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+
+#buyShelf{
+    position: fixed;
+    width: 7%;
+    height: 5.7%;
+    top: 68.4%;
+    left: 58.8%;
+    border-radius: 6%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #999;
+    z-index: 106;
+}
+
+#buyShelf:hover{background-color: #999;}
+
+#buyShelf:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+#taxsystem5{
+    position: fixed;
+    color: black;
+    width: 35%;
+    height: 3.5%;
+    top: 42.5%;
+    left: 35%;
+    font-size: 14px;
+    border-radius: 6%;
+    z-index: 101;
+}
+#taxsystem10{
+    position: fixed;
+    color: black;
+    width: 35%;
+    height: 3.5%;
+    top: 45%;
+    left: 35%;
+    font-size: 14px;
+    border-radius: 6%;
+    z-index: 101;
+}
+
+#taxsystem15{
+    position: fixed;
+    color: black;
+    width: 35%;
+    height: 3.5%;
+    top: 48%;
+    left: 35%;
+    font-size: 14px;
+    border-radius: 6%;
+    z-index: 101;
+}
+
+#tokenprice{
+    position: fixed;
+    color: black;
+    width: 35%;
+    height: 3.5%;
+    top: 46%;
+    left: 34%;
+    font-size: 14px;
+    border-radius: 6%;
+    z-index: 101;
+}
+
+#notification-area{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 20000;
+}
+
+#notification-area .notification {
+    padding: 15px 10px;
+    background: #111;
+    color: #f5f5f5;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 5px 0px;
+    z-index: 20000;
+}
+
+
+#notification-area .notification.success{
+    background: #389838;
+    z-index: 20000;
+}
+
+#notification-area .notification.error{
+    background: orangered;
+    z-index: 20000;
+}
+
+#notification-area .notification.info{
+    background: #f3ae1b;
+    z-index: 20000;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"type="application/javascript"></script>
+    <title>SuperMarket Game</title>
+
+    
+</head>
+<body >
+<!--
+    <div id="title" class="title">
+        <h1 class="supermarket">SuperMarket Game</h1>
+    </div>
+ Write your comments here 
+    <div id="login" class="login">
+        <h2 class="LoginTitle" id="LoginTitle">Connect to Metamask</h2>
+        <span class="Loginİnfo" id="Loginİnfo">You Need connect with metamask for play</span>
+        <br><button hidden id="Buy" class="Buy">Buy SuperMarket</button></br>
+        <br><button id="Connect"  class="Connect">Connect With Metamask</button></br>
+        <br><button id="Guide" class="Guide">Whitepaper</button></br>
+
+   
+    <div hidden id="balancepage">
+        <span id="balance">10</span>
+        <img id="tokenimage" src="./images/token.png">
+    </div>
+-->
+
+    <div id="notification-area">
+        
+    </div>
+
+    <div class="balancebox">
+        <p class="balance" id="balance" >0</p>
+    </div>
+
+    <div class="savebutton">
+        <button class="saverbutton" id="saverbutton" >Save</button>
+    </div>
+
+    <div id="map">
+        <img class="store" src="./images/emptymap.png" alt="" draggable="false">
+    
+
+    <div>
+        
+        <div>
+            <img hidden src="./images/shelf1.png"  class="Shelf1" id="ReloadedShelf1"  draggable="false">
+            <span  class="Shelf1Description" id="Shelf1Description" >Minute</span>
+        </div>
+        <div>
+            <img hidden src="./images/shelf3.png"  class="Shelf3" id="ReloadedShelf3" draggable="false">
+            <span class="Shelf3Description" id="Shelf3Description">Minute</span>
+        </div>
+        <div>
+            <img hidden src="./images/shelf4.png"  class="Shelf4" id="ReloadedShelf4" draggable="false">        
+            <span class="Shelf4Description" id="Shelf4Description" >Minute</span>
+        </div>
+        <div>
+            <img hidden src="./images/shelf6.png"  class="Shelf6" id="ReloadedShelf6" draggable="false">
+            <span class="Shelf6Description" id="Shelf6Description" >Minute</span>
+        </div>
+        <div>
+            <img hidden src="./images/bigFridge1.png"  class="bigFridge1" id="ReloadedBigFridge1" draggable="false">
+            <span id="BigFridge1Description" class="BigFridge1Description">Minute</span>
+        </div>
+        <div>
+            <img hidden  src="./images/bigFridge2.png"  class="bigFridge2" id="ReloadedBigFridge2" draggable="false" >
+            <span class="BigFridge2Description" id="BigFridge2Description" >Minute</span>
+        </div>
+        <div>
+            <img hidden src="./images/bigFridge3.png"  class="bigFridge3" id="ReloadedBigFridge3" draggable="false">
+            <span class="BigFridge3Description" id="BigFridge3Description" >Minute</span>
+        </div>
+        <div>
+             <img hidden src="./images/smallFridge1.png" class="smallFridge1" id="ReloadedSmallFridge1" draggable="false" >
+            <span class="smallFridge1Description" id="smallFridge1Description" >Minute</span>
+        </div>
+        <div>
+            <img hidden  src="./images/smallFridge2.png" class="smallFridge2" id="ReloadedSmallFridge2"  draggable="false">
+            <span class="smallFridge2Description" id="smallFridge2Description">Minute</span>
+        </div>
+        <div>
+
+        <div>
+            <img hidden  src="./images/emptyFridge.png" alt="" class="bigFridge1" id="bigFridge1" draggable="false">
+            <span id="BigFridge1Description" class="BigFridge1Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/emptyFridge.png" alt="" class="bigFridge2" id="bigFridge2" draggable="false">
+            <span class="BigFridge2Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/emptyFridge.png" alt="" class="bigFridge3" id="bigFridge3" draggable="false">
+            <span class="BigFridge3Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/emptySmallFridge.png"  alt="" class="smallFridge1" id="smallFridge1" draggable="false">
+            <span class="smallFridge1Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/emptySmallFridge.png" alt="" class="smallFridge2" id="smallFridge2" draggable="false">
+            <span class="smallFridge2Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/horizantalShelf.png" alt="" class="Shelf1" id="Shelf1" draggable="false">
+            <span class="Shelf1Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/horizantalShelf.png" alt="" class="Shelf3" id="Shelf3" draggable="false">
+            <span class="Shelf3Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/horizantalShelf.png" alt="" class="Shelf4" id="Shelf4" draggable="false">
+            <span class="Shelf4Description">Minute</span>
+        </div>
+
+        <div>
+            <img hidden  src="./images/horizantalShelf.png" alt="" class="Shelf6" id="Shelf6" draggable="false">
+            <span class="Shelf6Description">Minute</span>
+        </div>
+
+        <img hidden src="./images/bigFridge2.png" alt="" class="bigFridge2" draggable="false">
+        <img hidden src="./images/bigFridge3.png" alt="" class="bigFridge3" draggable="false">
+        <img hidden src="./images/smallFridge1.png" alt="" class="smallFridge1" draggable="false">
+        <img hidden src="./images/smallFridge2.png" alt="" class="smallFridge2" draggable="false">
+        <img src="./images/cashier.png" alt="" id="cashier" class="cashier" draggable="false">
+        <img src="./images/security.png" alt="" class="security1" draggable="false">
+        <img src="./images/security.png" alt="" class="security2" draggable="false">
+        
+        </div>
+    </div>  
+
+    <div hidden id="cashierpage">
+        <h1 id="Menu">Menu</h1>
+        <p id="description">What do you want to do ? Choose one</p>
+        <button id="upgrade">Upgrade</button>
+        <button id="buytoken">Deposit</button>
+        <button id="selltoken">Withdraw</button>
+        <button id="buyEquipment">Buy Equipments</button>
+        <button id="closecashierpage">X</button>
+        <p hidden id="upgradedescription">Next level: reload times will be 6 hours</p>
+        <p hidden id="upgradecost">Next Levet cost is 2 $USDT</p>
+        <p hidden id="afterupgrade"></p>
+        <p hidden id="buynote">Note:dont use comma(,) Use dot(.)</p>
+        <p hidden id="taxsystem5">Please read Whitepaper for Tax</p>
+        <p hidden id="taxsystem10"></p>
+        <p hidden id="taxsystem15">Liquidity: 3000 $SMG</p>
+        <p hidden id="tokenprice">Balance: 0 $MATIC</p>
+        <input type="number" id="buytokenamount" placeholder="Amount">
+    </div>
+
+    <div hidden id="shoppage">
+        <img id="shopSmallFridge" src="./images/smallFridge1.png" draggable="false">
+        <img src="./images/bigFridge1.png" id="shopBigFridge">
+        <img src="./images/shelf1.png" id="shopShelf">
+        <button id="buySmallFridge">Buy</button>
+        <button id="buyBigFridge">Buy</button>
+        <button id="buyShelf">Buy</button>
+    </div>
+    
+   
+    <script src="./js/clickevents.js"></script>
+    
+    <script src="./js/abi.js"></script>
+    <script src="./js/exchange.js"></script>
+    <script src="./js/alert.js"></script>
+    <script type="module" src="./js/firebasetest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
+
+</body>
+</html>
